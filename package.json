@@ -1,0 +1,12 @@
+{
+	"name": "rivbatch-viewer",
+	"main": "index.html",
+	"window": {
+		"toolbar": true,
+		"width": 800,
+		"height": 600
+	},
+	"dependencies":{
+		"xml2js": "latest"
+	}
+}
