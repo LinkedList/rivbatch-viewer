@@ -10,3 +10,7 @@
 #pozadavky {
 	margin-right: 20px;
 }
+
+.top-table td {
+	border-top: 1px solid #cbcbcb !important;
+}

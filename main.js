@@ -69,7 +69,6 @@ function showheader(json) {
 
 function showcontents(json) {
 	var pozadavky = json.dodavka.obsah['pozadavek-odstranit-zaznam-z-RIV'];
-	console.log(pozadavky);
 	pozadavky.forEach(appendrow);
 }
 
