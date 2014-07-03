@@ -7,6 +7,7 @@
 		"height": 600
 	},
 	"dependencies":{
-		"xml2js": "latest"
+		"xml2js": "latest",
+		"backbone": "latest"
 	}
 }
