@@ -1,16 +1,69 @@
+body {
+	min-width: 400px;
+}
+
 #warning {
 	color: red;
 }
 
-.content {
-	margin-left:20px;
-	margin-top: 45px;
+.button-success,
+.button-error,
+.button-warning,
+.button-secondary {
+	color: white;
+	border-radius: 4px;
+	text-shadow: 0 1px 1px rgba(0, 0, 0, 0.2);
 }
 
-#pozadavky {
-	margin-right: 20px;
+.button-success {
+	background: rgb(28, 184, 65); /* this is a green */
+}
+
+.button-error {
+	background: rgb(202, 60, 60); /* this is a maroon */
+}
+
+.button-warning {
+	background: rgb(223, 117, 20); /* this is an orange */
+}
+
+.button-secondary {
+	background: rgb(66, 184, 221); /* this is a light blue */
+}
+
+.content {
+	margin: 0 auto;
+	padding: 0 2em;
+	max-width: 800px;
+	margin-bottom: 50px;
+	line-height: 1.6em;
+}
+
+.buttons {
+	margin-top: 20px;
+	margin-left:auto;
+	margin-right:auto;
+	width: 340px;
 }
 
 .top-table td {
 	border-top: 1px solid #cbcbcb !important;
+}
+
+.banner {
+	margin: 0;
+	color: #333;
+	text-align: center;
+	padding: 2.5em 2em 0;
+	border-bottom: 1px solid #eee;
+}
+
+.header h1 {
+	margin: 0.2em 0;
+	font-size: 3em;
+	font-weight: 300;
+}
+
+.button-xlarge {
+	font-size: 125%;
 }
