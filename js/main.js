@@ -1,3 +1,7 @@
+requirejs(['models'], function (models) {
+	var header = new models.Header({});
+	console.log(header);
+});
 var inputElement = document.getElementById("file");
 inputElement.addEventListener("change", handleFile, false);
 
