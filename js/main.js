@@ -1,9 +1,8 @@
-requirejs(['models'], function (models) {
+requirejs(['models', 'views'], function (models, views) {
 	var header = new models.Header({});
-	console.log(header);
+	var fileInputView = new views.FileInputView();
 });
-var inputElement = document.getElementById("file");
-inputElement.addEventListener("change", handleFile, false);
+//inputElement.addEventListener("change", handleFile, false);
 
 
 function handleFile(e) {
