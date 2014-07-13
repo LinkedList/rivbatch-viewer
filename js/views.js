@@ -6,11 +6,12 @@ define('views', ['backbone', 'underscore', 'vent'], function(Backbone, _, Vent) 
 	},
 
 	initialize: function () {
+	    this.model = {};
 	    this.render();
 	},
 
 	render: function () {
-	    var template = _.template($('#file-input-template').html(), {});
+	    var template = _.template($('#file-input-template').html(), this.model);
 
 	    this.$el.html(template);
 	},
@@ -20,28 +21,17 @@ define('views', ['backbone', 'underscore', 'vent'], function(Backbone, _, Vent) 
 	    // first element child is the file input
 	    var files = e.currentTarget.firstElementChild.files;
 
+	    this.model = {};
+	    this.model.name = files[0].name;
+	    this.render();
+
 	    // testing Event Aggregator
 	    Vent.trigger('file:loaded', files[0].name);
 	}
     });
 
-    var FileNameHeader = Backbone.View.extend({
-	el: $("#file-name-header-container"),
-
-	initialize: function(model) {
-	    this.model = model;
-	    this.render();
-	},
-
-	render: function () {
-	    var template = _.template($("#file-name-header-template").html(), {name: this.model.name});
-
-	    this.$el.html(template);
-	}
-    });
 
     return {
 	FileInputView : FileInputView,
-	FileNameHeader : FileNameHeader
     };
 });

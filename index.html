@@ -12,7 +12,6 @@
 	</div>
 	<div class="content">
 		<div id="file-input-container"></div>
-		<div id="file-name-header-container"></div>
 		<div id="warning"></div>
 		<table class="pure-table pure-table-bordered">
 			<tr>
@@ -74,12 +73,13 @@
 		</table>
 	</div>
 	<script type="text/template" id="file-input-template">
-		<input type="file">
+		<% if(name.length == 0) { %>
+			<input type="file" class="margin-down">
+		<% } else {%>
+			<h2><%= name %></h2>
+		<% } %>
 	</script>
 
-	<script type="text/template" id="file-name-header-template">
-		<h2><%= name %></h2>
-	</script>
 	<script data-main="./js/main" src="./js/lib/require.js"></script>
 </body>
 </html>

@@ -67,3 +67,7 @@ body {
 .button-xlarge {
 	font-size: 125%;
 }
+
+.margin-down {
+	margin-bottom: .83em;
+}

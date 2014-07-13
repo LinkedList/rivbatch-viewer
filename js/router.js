@@ -10,7 +10,6 @@ define(['backbone', 'views'], function (Backbone, views) {
 
 	appRouter.on('route:defaultRoute', function (actions) {
 	    var fileInputView = new views.FileInputView();
-	    var fileNameHeader = new views.FileNameHeader({name: 'File'});
 	});
 
 	Backbone.history.start();
