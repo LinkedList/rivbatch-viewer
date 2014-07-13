@@ -1,4 +1,4 @@
-define('views', ['backbone', 'underscore'], function(Backbone, _) {
+define('views', ['backbone', 'underscore', 'vent'], function(Backbone, _, Vent) {
     var FileInputView = Backbone.View.extend({
 	el: $("#file-input-container"),
 	events: {
@@ -19,6 +19,9 @@ define('views', ['backbone', 'underscore'], function(Backbone, _) {
 	    // current target is file-input-container
 	    // first element child is the file input
 	    var files = e.currentTarget.firstElementChild.files;
+
+	    // testing Event Aggregator
+	    Vent.trigger('file:loaded', files[0].name);
 	}
     });
 
