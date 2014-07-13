@@ -1,8 +1,9 @@
 requirejs(['models', 'views'], function (models, views) {
 	var header = new models.Header({});
 	var fileInputView = new views.FileInputView();
+	var fileNameHeader = new views.FileNameHeader({name: 'File'});
+	fileNameHeader.render();
 });
-//inputElement.addEventListener("change", handleFile, false);
 
 
 function handleFile(e) {

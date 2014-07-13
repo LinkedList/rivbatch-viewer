@@ -22,7 +22,23 @@ define('views', ['backbone', 'underscore'], function(Backbone, _) {
 	}
     });
 
+    var FileNameHeader = Backbone.View.extend({
+	el: $("#file-name-header-container"),
+
+	initialize: function(model) {
+	    this.model = model;
+	    this.render();
+	},
+
+	render: function () {
+	    var template = _.template($("#file-name-header-template").html(), {name: this.model.name});
+
+	    this.$el.html(template);
+	}
+    });
+
     return {
-	FileInputView : FileInputView
+	FileInputView : FileInputView,
+	FileNameHeader : FileNameHeader
     };
 });
